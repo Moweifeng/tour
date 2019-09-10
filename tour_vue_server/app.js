@@ -11,7 +11,7 @@ var pool = mysql.createPool({
     password:"",
     port:3306,
     connectionLimit:20,
-    database:"cour"
+    database:"tour"
 })
 //4 创建web服务器监听 8080 端口
 var server=express();
@@ -23,7 +23,7 @@ server.use(cors({
 }));
 //配置session会话
 server.use(session({
-    secret:"cour",
+    secret:"tour",
     resave:true,
     rolling:true,
     saveUninitialized:true,
