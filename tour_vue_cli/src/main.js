@@ -12,6 +12,10 @@ Vue.use(MintUI)
 //1.4：引入图标字体文件
 import "./font/iconfont.css"
 
+
+
+
+
 new Vue({
   router,
   render: h => h(App)

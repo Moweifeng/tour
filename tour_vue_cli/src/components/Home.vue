@@ -14,7 +14,7 @@
                 <span>大佬负责</span>
             </mt-tab-container-item>
             <mt-tab-container-item id="me">
-                <span>太子负责</span>
+                <login></login>
             </mt-tab-container-item>
         </mt-tab-container>
 
@@ -43,12 +43,19 @@
     </div>
 </template>
 <script>
+import Login from './user/Login'
 export default {
+    // comments:{
+    //   "login":Login
+    // },
     data(){
         return{
             active:"index",
         }
     },
+    components:{
+        "login":Login
+    }
 }
 </script>
 <style scoped>
