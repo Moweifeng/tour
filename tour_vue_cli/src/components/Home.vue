@@ -3,6 +3,7 @@
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
                 <span>林氏集团负责</span>
+                <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -43,6 +44,7 @@
     </div>
 </template>
 <script>
+import Index from "./index/index"
 import Login from './user/Login'
 export default {
     // comments:{
@@ -54,7 +56,8 @@ export default {
         }
     },
     components:{
-        "login":Login
+        "login":Login,
+        "index":Index,
     }
 }
 </script>
