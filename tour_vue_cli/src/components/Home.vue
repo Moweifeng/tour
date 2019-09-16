@@ -2,7 +2,9 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
+
                <header01></header01>
+                <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -43,6 +45,7 @@
     </div>
 </template>
 <script>
+import Index from "./index/index"
 import Login from './user/Login'
 import header from './Home_header/header.vue'
 export default {
@@ -56,9 +59,14 @@ export default {
     },
     components:{
         "login":Login,
-        header01:header
+        header01:header,
+        "index":Index,
      }
-}
+
+       
+    }
+
+
 </script>
 <style scoped>
 

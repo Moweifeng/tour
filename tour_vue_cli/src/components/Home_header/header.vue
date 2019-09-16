@@ -34,9 +34,9 @@ export default {
 }
 </script>
 <style scoped>
-.home_head{
-    height: 1000px;
-}
+/* .home_head{
+    height: 1000px; */
+/* } */
 
     
 </style>
