@@ -11,9 +11,16 @@ import "mint-ui/lib/style.css"
 Vue.use(MintUI)
 //1.4：引入图标字体文件
 import "./font/iconfont.css"
+import 'swiper/dist/css/swiper.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
 
-
-
+import axios from "axios"
+axios.defaults.withCredentials=true
+//1.7设置ajax请求基础路径，必须写127.0.0.1不能写localhost
+axios.defaults.baseURL="http://127.0.0.1:8080/"
+//1.8将axios注册vue实例,放在原型链Vue的prototype上
+Vue.prototype.axios=axios
 
 
 new Vue({
