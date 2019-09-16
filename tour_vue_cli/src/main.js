@@ -11,9 +11,6 @@ import "mint-ui/lib/style.css"
 Vue.use(MintUI)
 //1.4：引入图标字体文件
 import "./font/iconfont.css"
-import 'swiper/dist/css/swiper.css'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-Vue.use(VueAwesomeSwiper)
 
 import axios from "axios"
 axios.defaults.withCredentials=true

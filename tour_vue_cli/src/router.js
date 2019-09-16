@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from './components/Home.vue'
 import Schedule from './components/Schedule.vue'
 import Recent from './components/Recent.vue'
-import Hot from './components/Hot.vue'
+
 
 
 import HelloContainer from "./components/HelloWorld.vue"
@@ -14,7 +14,7 @@ export default new Router({
     {path:'/',component:HelloContainer},
     {path:'./Schedule',component:Schedule},
     {path:'./Recent',component:Recent},
-    {path:'./Hot',component:Hot},
+    
    
   ]
 })

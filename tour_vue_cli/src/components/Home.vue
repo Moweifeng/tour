@@ -3,6 +3,7 @@
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
                 <span>林氏集团负责</span>
+                <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -12,7 +13,11 @@
             </mt-tab-container-item>
 
 
-            <mt-tab-container-item id="schedule">
+
+            
+
+             <mt-tab-container-item id="schedule">
+
                 <mt-navbar v-model="selected">
                     <mt-tab-item id="1">出行信息</mt-tab-item>
                     <mt-tab-item id="2">我的行程</mt-tab-item>
@@ -34,9 +39,8 @@
                 </mt-tab-container>
             </mt-tab-container-item> 
 
-
             <mt-tab-container-item id="me">
-                <span>太子负责</span>
+                <login></login>
             </mt-tab-container-item>
         </mt-tab-container>
 
@@ -65,12 +69,18 @@
     </div>
 </template>
 <script>
+
 import Schedule from "./Schedule.vue";
 import Recent from "./Recent.vue";
-import Hot from "./Hot.vue";
 
+
+
+
+import Index from "./index/index"
+import Login from './user/Login'
 
 export default {
+    
     data(){
         return{
             active:"index",
@@ -78,11 +88,17 @@ export default {
         }
     },
     components:{
+        "login":Login,
+        "index":Index,
         schedule:Schedule,
         recent:Recent,
-        hot:Hot,
+        
        
     },
+
+        
+    
+
 }
 </script>
 <style scoped>
