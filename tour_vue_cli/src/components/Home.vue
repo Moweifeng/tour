@@ -2,12 +2,8 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
-<<<<<<< HEAD
-                <productlist></productlist>
-=======
                 <span>林氏集团负责</span>
                 <index></index>
->>>>>>> 79c1ab60de8f96c805546569b32786f4523e8f35
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -48,12 +44,9 @@
     </div>
 </template>
 <script>
-<<<<<<< HEAD
 import Productlist from './index/productlist'
-=======
 import Index from "./index/index"
 import Login from './user/Login'
->>>>>>> 79c1ab60de8f96c805546569b32786f4523e8f35
 export default {
     // comments:{
     //   "login":Login
@@ -64,14 +57,10 @@ export default {
         }
     },
     components:{
-<<<<<<< HEAD
-        "productlist":Productlist
-    },
-=======
+        "productlist":Productlist,
         "login":Login,
         "index":Index,
-    }
->>>>>>> 79c1ab60de8f96c805546569b32786f4523e8f35
+    },
 }
 </script>
 <style scoped>
