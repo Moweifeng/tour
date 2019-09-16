@@ -2,7 +2,7 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
-                <span>林氏集团负责</span>
+               <header01></header01>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -44,6 +44,7 @@
 </template>
 <script>
 import Login from './user/Login'
+import header from './Home_header/header.vue'
 export default {
     // comments:{
     //   "login":Login
@@ -54,8 +55,9 @@ export default {
         }
     },
     components:{
-        "login":Login
-    }
+        "login":Login,
+        header01:header
+     }
 }
 </script>
 <style scoped>

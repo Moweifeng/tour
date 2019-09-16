@@ -12,6 +12,11 @@ Vue.use(MintUI)
 //1.4：引入图标字体文件
 import "./font/iconfont.css"
 
+//引入Swiper组件库
+// import vueSwiper from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+
+// Vue.use(vueSwiper)
 
 
 
