@@ -11,9 +11,27 @@
             <mt-tab-container-item id="strategy">
                 <span>栋栋负责</span>
             </mt-tab-container-item>
-            <mt-tab-container-item id="distanceRun">
-                <span>大佬负责</span>
-            </mt-tab-container-item>
+             <mt-tab-container-item id="schedule">
+                <mt-navbar v-model="selected">
+                    <mt-tab-item id="1">出行信息</mt-tab-item>
+                    <mt-tab-item id="2">我的行程</mt-tab-item>
+                </mt-navbar>
+
+                <mt-tab-container v-model="selected">
+                    <mt-tab-container-item id="1">
+                        <mt-cell>
+                            <recent></recent>
+                            <!-- <hot></hot> -->
+                            
+                        </mt-cell>
+                    </mt-tab-container-item>
+                    <mt-tab-container-item id="2">
+                        <mt-cell>
+                            <schedule></schedule>
+                        </mt-cell>
+                    </mt-tab-container-item>
+                </mt-tab-container>
+            </mt-tab-container-item> 
             <mt-tab-container-item id="me">
                 <login></login>
             </mt-tab-container-item>
