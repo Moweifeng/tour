@@ -2,7 +2,8 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
-                <span>林氏集团负责</span>
+
+               <header01></header01>
                 <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
@@ -74,6 +75,7 @@ import Schedule from "./Schedule.vue";
 import Recent from "./Recent.vue";
 import Index from "./index/index"
 import Login from './user/Login'
+import header from './Home_header/header.vue'
 export default {
     
     data(){
@@ -85,9 +87,10 @@ export default {
     components:{
         "productlist":Productlist,
         "login":Login,
+        "header":header,
         "index":Index,
-        schedule:Schedule,
-        recent:Recent,
+        "schedule":Schedule,
+        "recent":Recent,
     },
 }
 </script>
