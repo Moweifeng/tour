@@ -2,7 +2,7 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
-                <span>林氏集团负责</span>
+                <productlist></productlist>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
                 <span>暂无</span>
@@ -43,11 +43,15 @@
     </div>
 </template>
 <script>
+import Productlist from './index/productlist'
 export default {
     data(){
         return{
             active:"index",
         }
+    },
+    components:{
+        "productlist":Productlist
     },
 }
 </script>

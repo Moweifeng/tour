@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import BScroll from 'better-scroll'
+Vue.prototype.BScroll = BScroll
 //删除 line 5~ line 16
 //1：引入第三方组件库 mint-ui
 //1.1 完成引入所有组件
@@ -11,7 +13,6 @@ import "mint-ui/lib/style.css"
 Vue.use(MintUI)
 //1.4：引入图标字体文件
 import "./font/iconfont.css"
-
 new Vue({
   router,
   render: h => h(App)
