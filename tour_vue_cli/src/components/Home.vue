@@ -8,7 +8,7 @@
                 <span>暂无</span>
             </mt-tab-container-item>
             <mt-tab-container-item id="strategy">
-                <span>栋栋负责</span>
+                <res1></res1>
             </mt-tab-container-item>
             <mt-tab-container-item id="distanceRun">
                 <span>大佬负责</span>
@@ -43,11 +43,15 @@
     </div>
 </template>
 <script>
+    import Res1 from './res1'
 export default {
     data(){
         return{
             active:"index",
         }
+    },
+    components:{
+        "res1":Res1,
     },
 }
 </script>
