@@ -12,9 +12,7 @@
             <mt-tab-container-item id="strategy">
                 <span>栋栋负责</span>
             </mt-tab-container-item>
-
-             <mt-tab-container-item id="schedule">
-
+            <mt-tab-container-item id="schedule">
                 <mt-navbar v-model="selected">
                     <mt-tab-item id="1">出行信息</mt-tab-item>
                     <mt-tab-item id="2">我的行程</mt-tab-item>
@@ -66,8 +64,8 @@
     </div>
 </template>
 <script>
-import Schedule from "./Schedule.vue";
-import Recent from "./Recent.vue";
+import Schedule from "./schedule/Schedule";
+import Recent from "./schedule/Recent";
 import Index from "./index/index"
 import Login from './user/Login'
 import header from './Home_header/header.vue'

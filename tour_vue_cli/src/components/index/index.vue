@@ -10,7 +10,7 @@
           @click="isSelect(index)"
         >
           <p v-text="item.title" class="list2-title"></p>
-          <span v-text="item.content" class="list2-content"></span>
+          <span v-text="item.subtitle" class="list2-content"></span>
         </div>
       </div>
     </div>
@@ -46,12 +46,12 @@ export default {
   data() {
     return {
       indexList2: [
-        { title: "推荐", content: "猜你喜欢" },
-        { title: "周边游", content: "短途好去处" },
-        { title: "文艺范", content: "清新打卡地" },
-        { title: "探险", content: "极致探险" },
-        { title: "当季游", content: "当季热门" },
-        { title: "自然", content: "美不胜收" }
+        { title: "推荐", subtitle: "猜你喜欢" },
+        { title: "周边游", subtitle: "短途好去处" },
+        { title: "文艺范", subtitle: "清新打卡地" },
+        { title: "探险", subtitle: "极致探险" },
+        { title: "当季游", subtitle: "当季热门" },
+        { title: "自然", subtitle: "美不胜收" }
       ],
       isSelected: 0,
       scrollX:0,
@@ -90,6 +90,8 @@ export default {
   background: linear-gradient(to top right, #fff, rgb(255, 230, 0));
   border-radius: 100%;
   border-top-right-radius: 0;
+  font-weight: bold;
+  color: #000;
 }
 .index-list2 {
     width: 375px;
@@ -100,9 +102,16 @@ export default {
     justify-content: flex-start;
     flex-wrap: nowrap;
     width: 120%;
+    text-align: center;
+    color:#aaa;
+    font-size: 12px;
+    margin-bottom:10px; 
 }
 .list2-div {
-    width: 200px;
+    margin: 10px;
 }
-
+.list2-title{
+  font-size: 16px;
+  margin-top:3px; 
+}
 </style>

@@ -25,13 +25,13 @@
                     <div class="fa" >
                         <img :src="'http://127.0.0.1:8080/'+item.img_url" class="imgurl"> 
                         <div class="loc">
-                            <img src="../assets/loc.png" class="locimg" >
+                            <img src="../../assets/loc.png" class="locimg" >
                             <span>{{item.location}}</span>
                         </div> 
                         <p>{{item.intro}}</p>
                         <img :src="'http://127.0.0.1:8080/'+item.avatar" class="avatar">
                         <span class="user">{{item.user}}</span>
-                        <img src="../assets/read1.png" class="read">
+                        <img src="../../assets/read1.png" class="read">
                         <span class="quantity">{{item.quantity}}</span>
 
                     </div>
