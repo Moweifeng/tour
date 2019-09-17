@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import BScroll from 'better-scroll'
-Vue.prototype.BScroll = BScroll
+import Bscroll from 'better-scroll'
+Vue.prototype.BScroll = Bscroll
 //删除 line 5~ line 16
 //1：引入第三方组件库 mint-ui
 //1.1 完成引入所有组件
@@ -16,7 +16,8 @@ import "./font/iconfont.css"
 //引入Swiper组件库
 // import vueSwiper from 'vue-awesome-swiper'
 // import 'swiper/dist/css/swiper.css'
-
+import BScroll from 'better-scroll'
+Vue.prototype.BScroll = BScroll
 // Vue.use(vueSwiper)
 import axios from "axios"
 axios.defaults.withCredentials=true

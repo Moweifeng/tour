@@ -13,10 +13,6 @@
                 <span>栋栋负责</span>
             </mt-tab-container-item>
 
-
-
-            
-
              <mt-tab-container-item id="schedule">
 
                 <mt-navbar v-model="selected">
@@ -70,7 +66,6 @@
     </div>
 </template>
 <script>
-import Productlist from './index/productlist'
 import Schedule from "./Schedule.vue";
 import Recent from "./Recent.vue";
 import Index from "./index/index"
@@ -85,9 +80,8 @@ export default {
         }
     },
     components:{
-        "productlist":Productlist,
         "login":Login,
-        "header":header,
+        "header01":header,
         "index":Index,
         "schedule":Schedule,
         "recent":Recent,
