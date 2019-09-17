@@ -7,6 +7,7 @@
 <style>
    .app-container{
      overflow-x:hidden;
+
    }
 
  .mui-bar-tab .mui-tab-item-tao.mui-active {
