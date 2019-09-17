@@ -2,7 +2,8 @@
     <div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="index">
-                <span>林氏集团负责</span>
+
+               <header01></header01>
                 <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
@@ -11,9 +12,34 @@
             <mt-tab-container-item id="strategy">
                 <span>栋栋负责</span>
             </mt-tab-container-item>
-            <mt-tab-container-item id="distanceRun">
-                <span>大佬负责</span>
-            </mt-tab-container-item>
+
+
+
+            
+
+             <mt-tab-container-item id="schedule">
+
+                <mt-navbar v-model="selected">
+                    <mt-tab-item id="1">出行信息</mt-tab-item>
+                    <mt-tab-item id="2">我的行程</mt-tab-item>
+                </mt-navbar>
+
+                <mt-tab-container v-model="selected">
+                    <mt-tab-container-item id="1">
+                        <mt-cell>
+                            <recent></recent>
+                            <!-- <hot></hot> -->
+                            
+                        </mt-cell>
+                    </mt-tab-container-item>
+                    <mt-tab-container-item id="2">
+                        <mt-cell>
+                            <schedule></schedule>
+                        </mt-cell>
+                    </mt-tab-container-item>
+                </mt-tab-container>
+            </mt-tab-container-item> 
+
             <mt-tab-container-item id="me">
                 <login></login>
             </mt-tab-container-item>
@@ -32,8 +58,8 @@
                 <img :src="active=='strategy'?require('../assets/img/ic_element_tabbar_destination_pressed.png'):require('../assets/img/ic_element_tabbar_destination_normal.png')" class="active-icon" slot="icon">
                 <span>攻略</span>
                 </mt-tab-item>
-            <mt-tab-item id="distanceRun">
-                <img :src="active=='distanceRun'?require('../assets/img/ic_element_tabbar_schedule_pressed.png'):require('../assets/img/ic_element_tabbar_schedule_normal.png')" class="active-icon" slot="icon">
+            <mt-tab-item id="schedule">
+                <img :src="active=='schedule'?require('../assets/img/ic_element_tabbar_schedule_pressed.png'):require('../assets/img/ic_element_tabbar_schedule_normal.png')" class="active-icon" slot="icon">
                 <span>行程</span>
                 </mt-tab-item>
             <mt-tab-item id="me">
@@ -44,22 +70,39 @@
     </div>
 </template>
 <script>
+
+import Schedule from "./Schedule.vue";
+import Recent from "./Recent.vue";
+
+
+
+
 import Index from "./index/index"
 import Login from './user/Login'
+import header from './Home_header/header.vue'
+
+
+
 export default {
-    // comments:{
-    //   "login":Login
-    // },
+    
     data(){
         return{
             active:"index",
+            selected:"1",
         }
     },
     components:{
         "login":Login,
+        header01:header,
         "index":Index,
+        schedule:Schedule,
+        recent:Recent,
+
+     }
+
+       
     }
-}
+
 </script>
 <style scoped>
 
@@ -67,5 +110,6 @@ export default {
 <style>
     .mint-tabbar>.mint-tab-item.is-selected{
         color:#000;
-    } 
+    }
+    
 </style>
