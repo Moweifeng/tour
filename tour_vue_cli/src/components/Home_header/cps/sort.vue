@@ -3,7 +3,7 @@
        <div class="logo">
            <router-link to="/"><img src="../../../assets/Home_header/logo/lo01.png"><span>酒店</span></router-link>
            <router-link to="/"><img src="../../../assets/Home_header/logo/lo02.png"><span>汽车票</span></router-link>
-           <router-link to="/"><img src="../../../assets/Home_header/logo/lo03.png"><span>飞机票</span></router-link>
+           <router-link to="/plane"><img src="../../../assets/Home_header/logo/lo03.png"><span>飞机票</span></router-link>
            <router-link to="/"><img src="../../../assets/Home_header/logo/lo04.png"><span>火车票</span></router-link>
            <router-link to="/"><img src="../../../assets/Home_header/logo/lo05.png"><span>门票</span></router-link>         
        </div>
