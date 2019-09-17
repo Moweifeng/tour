@@ -10,7 +10,7 @@
                 <span>暂无</span>
             </mt-tab-container-item>
             <mt-tab-container-item id="strategy">
-                <span>栋栋负责</span>
+                <res1></res1>
             </mt-tab-container-item>
             <mt-tab-container-item id="schedule">
                 <mt-navbar v-model="selected">
@@ -64,8 +64,9 @@
     </div>
 </template>
 <script>
-import Schedule from "./schedule/Schedule";
-import Recent from "./schedule/Recent";
+import Schedule from "./schedule/Schedule"
+import Recent from "./schedule/Recent"
+import Res1 from './res1'
 import Index from "./index/index"
 import Login from './user/Login'
 import header from './Home_header/header.vue'
@@ -78,6 +79,7 @@ export default {
         }
     },
     components:{
+        "res1":Res1,
         "login":Login,
         "header01":header,
         "index":Index,
