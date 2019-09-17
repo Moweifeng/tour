@@ -7,7 +7,7 @@
   <router-link to="/" slot="right" style="color: black">帮助</router-link>
             </mt-header>
             <!-- <div v-if="f==true"> -->
-            <img src="../../img/user.png" class="img" >
+            <img src="../../img/userimg/user.png" class="img" >
             
             <div v-if="f">        
                  <mt-field label="用户名" placeholder="请输入用户名" v-model="uname" id="uname" style="border-bottom:1px solid #ccc ;width:89%"></mt-field>

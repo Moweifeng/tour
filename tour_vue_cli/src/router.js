@@ -5,7 +5,6 @@ import Schedule from './components/Schedule.vue'
 import Recent from './components/Recent.vue'
 
 
-
 import HelloContainer from "./components/HelloWorld.vue"
 Vue.use(Router)
 export default new Router({

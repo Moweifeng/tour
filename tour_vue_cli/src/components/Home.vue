@@ -37,7 +37,8 @@
             </mt-tab-container-item> 
 
             <mt-tab-container-item id="me">
-                <login></login>
+                <user></user>
+                <!-- <login></login> -->
             </mt-tab-container-item>
         </mt-tab-container>
 
@@ -71,6 +72,7 @@ import Recent from "./Recent.vue";
 import Index from "./index/index"
 import Login from './user/Login'
 import header from './Home_header/header.vue'
+import User from './user/User.vue'
 export default {
     
     data(){
@@ -85,6 +87,7 @@ export default {
         "index":Index,
         "schedule":Schedule,
         "recent":Recent,
+        "user":User,
     },
 }
 </script>
