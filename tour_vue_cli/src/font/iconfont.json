@@ -1,0 +1,30 @@
+{
+  "id": "1423934",
+  "name": "feizhu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3397944",
+      "name": "shipin",
+      "font_class": "shipin",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "6038965",
+      "name": "zan",
+      "font_class": "zan",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "6643468",
+      "name": "feiji",
+      "font_class": "feiji",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    }
+  ]
+}
