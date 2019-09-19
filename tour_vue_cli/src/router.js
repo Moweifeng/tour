@@ -3,11 +3,9 @@ import Router from 'vue-router'
 import Home from './components/Home.vue'
 import Schedule from './components/schedule/Schedule.vue'
 import Recent from './components/schedule/Recent.vue'
+import Intro from './components/schedule/Intro.vue'
 import PlaneTicket from "./components/Home_header/PlaneTicket.vue"
-
-
-
-// import HelloContainer from "./components/HelloWorld.vue"
+import HelloContainer from "./components/HelloWorld.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -17,6 +15,11 @@ export default new Router({
     {path:'./Schedule',component:Schedule},
     {path:'./Recent',component:Recent},
     // {path:'/',component:HelloContainer},
+    {path:'/Schedule',component:Schedule},
+    {path:'/Intro',component:Intro},
+    {path:'/Recent',component:Recent},
+    {path:'/',component:HelloContainer},
+
 
   ]
 })
