@@ -186,7 +186,7 @@ export default {
     }
     .recommed-img{
         position: relative;
-        background: url("../../img/spain.png") no-repeat;
+        /* background: url("../../img/spain.png") no-repeat; */
         
         height: 150px;
     }
