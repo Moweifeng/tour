@@ -54,7 +54,7 @@
         </div>
         <div>
             <img src="lists[goin].img"> >{{goin}}-->
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 <script>

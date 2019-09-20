@@ -7,7 +7,7 @@
                 <index></index>
             </mt-tab-container-item>
             <mt-tab-container-item id="find">
-                <span>暂无</span>
+                <find></find>
             </mt-tab-container-item>
             <mt-tab-container-item id="strategy">
                 <res1></res1>
@@ -70,6 +70,7 @@ import Res1 from './res1'
 import Index from "./index/index"
 import Login from './user/Login'
 import header from './Home_header/header.vue'
+import Find from './find/find'
 export default {
     
     data(){
@@ -85,6 +86,7 @@ export default {
         "index":Index,
         "schedule":Schedule,
         "recent":Recent,
+        "find":Find,
     },
 }
 </script>
