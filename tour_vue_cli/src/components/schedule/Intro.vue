@@ -1,6 +1,7 @@
 <template>
     <div>
         <img :src="'http://127.0.0.1:8080/'+dataObj.img_url" class="img">
+        <img src="../../assets/img/return.png" class="return" @click="goback">
         <div class="main">
             <h3>{{dataObj.title}}</h3>
             <h6>{{dataObj.subtitle}}</h6>
@@ -71,6 +72,9 @@ export default {
     },
     props:["pid"],
     methods:{
+        goback(){
+            this.$router.push("/home")
+        },
         load(){
             (async()=>{
                 var result = await this.axios.get("http://localhost:8080/fantastic",{
@@ -91,6 +95,12 @@ export default {
 </script>
 
 <style scoped>
+    .return{
+        position:absolute;
+        top:5px;
+        left:5px;
+        z-index: 10;
+    }
     .first .day{
         border-bottom:0;
         height:30px;

@@ -5,7 +5,7 @@
                 <h3>定个计划马上出发</h3>
                 <router-link to="#" class="fresh">创建新的行程</router-link>
             </div>
-            <router-link to="#" class="end">已结束的行程</router-link>
+            <router-link to="/end" class="end">已结束的行程</router-link>
 
                                 
             <div class="fancy">

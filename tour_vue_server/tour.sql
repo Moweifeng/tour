@@ -156,16 +156,16 @@ CREATE TABLE recommend(
 	 user      varchar(32),
 	 quantity  smallint(10)
 );
-INSERT INTO recommend VALUES(null,"img/recommend/1.png","丽江","环境很好风景宜人","img/avatar/1.jpg","flypig",313);
-INSERT INTO recommend VALUES(null,"img/recommend/2.png","大理","湖水十分清澈，在上面划船是一种享受","img/avatar/1.jpg","star",66);
-INSERT INTO recommend VALUES(null,"img/recommend/3.png","丽江","天气晴朗攀登玉龙雪山","img/avatar/3.jpg","piero",39);
-INSERT INTO recommend VALUES(null,"img/recommend/4.png","大理","在大理也能发现小桥流水人家","img/avatar/4.jpg","fabragas",12);
-INSERT INTO recommend VALUES(null,"img/recommend/5.png","安特卫普","来钻石啤酒巧克力之乡游览一番","img/avatar/1.jpg","tom",98);
-INSERT INTO recommend VALUES(null,"img/recommend/6.png","哥本哈根","参观小美人鱼","img/avatar/1.jpg","john",106);
+INSERT INTO recommend VALUES(null,"img/recommend/1.png","伯尔尼","环境很好风景宜人","img/avatar/1.jpg","flypig",313);
+INSERT INTO recommend VALUES(null,"img/recommend/2.png","巴塞罗那","湖水十分清澈，在上面划船是一种享受","img/avatar/1.jpg","star",66);
+INSERT INTO recommend VALUES(null,"img/recommend/3.png","苏黎世","天气晴朗攀登阿尔卑斯山","img/avatar/3.jpg","piero",39);
+INSERT INTO recommend VALUES(null,"img/recommend/4.png","哥本哈根","发现小桥流水人家","img/avatar/4.jpg","fabragas",12);
+INSERT INTO recommend VALUES(null,"img/recommend/5.png","奥斯陆","来体验一下钻石啤酒巧克力","img/avatar/1.jpg","tom",98);
+INSERT INTO recommend VALUES(null,"img/recommend/6.png","赫尔辛基","参观著名雕像","img/avatar/1.jpg","john",106);
 INSERT INTO recommend VALUES(null,"img/recommend/7.png","法兰克福","天气晴朗万里无云","img/avatar/2.jpg","modric",335);
-INSERT INTO recommend VALUES(null,"img/recommend/8.png","布鲁塞尔","到处逛一逛，街道洁净很漂亮","img/avatar/8.jpg","ronaldo",97);
-INSERT INTO recommend VALUES(null,"img/recommend/9.png","安特卫普","到集市上采购生活必需品","img/avatar/7.jpg","zidane",54);
-INSERT INTO recommend VALUES(null,"img/recommend/10.png","鹿特丹","一望无际的农田","img/avatar/6.jpg","ramos",68);
+INSERT INTO recommend VALUES(null,"img/recommend/8.png","慕尼黑","到处逛一逛，街道洁净很漂亮","img/avatar/8.jpg","ronaldo",97);
+INSERT INTO recommend VALUES(null,"img/recommend/9.png","佛罗伦萨","到集市上采购生活必需品","img/avatar/7.jpg","zidane",54);
+INSERT INTO recommend VALUES(null,"img/recommend/10.png","罗马","一望无际的农田","img/avatar/6.jpg","ramos",68);
 INSERT INTO recommend VALUES(null,"img/recommend/11.png","里昂","又是一年葡萄成熟时","img/avatar/5.jpg","lampard",21);
 INSERT INTO recommend VALUES(null,"img/recommend/12.png","维也纳","多瑙河明珠音乐之都","img/avatar/2.jpg","villas",76);
 INSERT INTO recommend VALUES(null,"img/recommend/13.png","苏黎世","参观世界一流学府苏黎世理工大学","img/avatar/3.jpg","torres",302);

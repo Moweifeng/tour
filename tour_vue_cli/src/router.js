@@ -4,6 +4,8 @@ import Home from './components/Home.vue'
 import Schedule from './components/schedule/Schedule.vue'
 import Recent from './components/schedule/Recent.vue'
 import Intro from './components/schedule/Intro.vue'
+import End from './components/schedule/end.vue'
+import scroll from './components/schedule/scroll.vue'
 import PlaneTicket from "./components/Home_header/PlaneTicket.vue"
 import HelloContainer from "./components/HelloWorld.vue"
 Vue.use(Router)
@@ -17,6 +19,8 @@ export default new Router({
     {path:'/Schedule',component:Schedule},
     {path:'/Intro/:pid',component:Intro,props:true},
     {path:'/Recent',component:Recent},
+    {path:'/end',component:End},
+    {path:'/scroll',component:scroll},
     {path:'/',component:HelloContainer},
 
 
