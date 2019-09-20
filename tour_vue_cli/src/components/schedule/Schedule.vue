@@ -15,7 +15,7 @@
                     <div class="child" v-for="(item,index) of list" :key="index">
                         <h3>{{item.title}}</h3>
                         <h5>{{item.subtitle}}</h5>
-                        <router-link to="#" class="link">
+                        <router-link :to="'/intro/'+item.pid" class="link">
                             <img :src="'http://127.0.0.1:8080/'+item.img_url" class="pic">
                         </router-link>
                     </div>

@@ -115,7 +115,7 @@ INSERT INTO fantastic VALUES(null,"img/fantacy/oslo.png","挪威奥斯陆4日游
 "挪威奥斯陆的旅游名胜","img/recommend/5.png","img/recommend/15.png","img/recommend/25.png");
 
 INSERT INTO fantastic VALUES(null,"img/fantacy/helsinki.png","芬兰赫尔辛基3日游","适宜8-11月","img/avatar/6.jpg","lampard","赫尔辛基广场","芬兰湾","格陵兰岛","广场",
-"风景优美","艺术圣地","是瑞士西部的一座中世纪水上城堡，位于日内瓦湖畔，是瑞士历史最悠久的历史遗迹之一","沃韦曾是罗马帝国的居民点，景色优美，吸引许多名人在此居住",
+"风景优美","艺术圣地","位于赫尔辛基市中心，是芬兰历史最悠久的历史遗迹之一","沃韦曾是罗马帝国的居民点，景色优美，吸引许多名人在此居住",
 "这是一个迷人的旅游胜地，很多艺术家都来过这里","img/recommend/6.png","img/recommend/16.png","img/recommend/26.png");
 
 INSERT INTO fantastic VALUES(null,"img/fantacy/frankfurt.png","法兰克福5日游","适宜6-11月","img/avatar/7.jpg","piero","法兰克福金融城","莱茵河谷游船","圣家堂","金融城",
@@ -142,9 +142,9 @@ CREATE TABLE recent(
     location varchar(32),
     time     varchar(32)
 );
-INSERT INTO recent VALUES(null,"img/recent/1.png","阿联酋迪拜豪华游","广州出发","下周六");
-INSERT INTO recent VALUES(null,"img/recent/2.png","枫叶国体验之旅","北京出发","本周三");
-INSERT INTO recent VALUES(null,"img/recent/3.png","澳洲阳关沙滩之旅","深圳出发","下周日");
+INSERT INTO recent VALUES(null,"img/recent/1.png","瑞士伯尔尼豪华游","广州出发","下周六");
+INSERT INTO recent VALUES(null,"img/recent/2.png","西班牙体验之旅","北京出发","本周三");
+INSERT INTO recent VALUES(null,"img/recent/3.png","瑞士苏黎世体验游","深圳出发","下周日");
 
 DROP TABLE IF EXISTS recommend;
 CREATE TABLE recommend(

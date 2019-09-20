@@ -14,9 +14,8 @@ export default new Router({
     {path:'/',component:Home},
     {path:'./Schedule',component:Schedule},
     {path:'./Recent',component:Recent},
-    // {path:'/',component:HelloContainer},
     {path:'/Schedule',component:Schedule},
-    {path:'/Intro',component:Intro},
+    {path:'/Intro/:pid',component:Intro,props:true},
     {path:'/Recent',component:Recent},
     {path:'/',component:HelloContainer},
 
