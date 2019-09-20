@@ -3,8 +3,11 @@
         <div class="d1">
         <mt-header style="background:white">
             <router-link to="/" slot="right" >
-            <img src="../../img/userimg/shezhi.png" style="margin-right:15px"> 
-            <img src="../../img/userimg/xiaoxikuang.png" > </router-link>
+            <img src="../../img/userimg/shezhi.png" style="margin-right:15px">
+             </router-link> 
+               <router-link to="/" slot="right" >
+            <img src="../../img/userimg/xiaoxikuang.png" >
+             </router-link>
         </mt-header>
         <div class="tou">
             <img src="../../img/userimg/touxiang.png" class="touxiang">
@@ -34,27 +37,104 @@
              </div>
              <div class="dingdanys">
                   <ul>
-                      <li><a href="#"><img>待付款</a></li>
-                      <li><a href="#"><img>处理中</a></li>
-                      <li><a href="#"><img>待出行</a></li>
-                      <li><a href="#"><img>待评价</a></li>
-                      <li><a href="#"><img>退款/售后</a></li>
+                      <li><a href="#"><img src="../../img/userimg/daifukuandingdan.png">待付款</a></li>
+                      <li><a href="#"><img src="../../img/userimg/dingdanchulizhong.png">处理中</a></li>
+                      <li><a href="#"><img src="../../img/userimg/shenhetongguo.png">待出行</a></li>
+                      <li><a href="#"><img src="../../img/userimg/daipingjia.png">待评价</a></li>
+                      <li><a href="#"><img src="../../img/userimg/tuikuanshouhou.png">退款/售后</a></li>
                      
                   </ul>
              </div>
+            </div>
+            <div class="guanggao">
+                <span class="lvyou">旅游狂欢 限时8折起</span>
+                <span class="lvyou2">F2/F3专享免费生房+延时退房礼遇</span>
+                <span class="chakan"><a href="#">点击查看</a></span>
+            </div>
+            <div class="usergongju">
+                 <div class="gongju" >
+                     <span>我的工具</span>
+                 </div>
+                <div class="gongju1">
+                    <ul>
+                        <li><a href="#">我的会员卡</a></li>
+                        <li><a href="#">常用信息</a></li>
+                        <li><a href="#">邀请有礼</a></li>
+                        <li><a href="#">定制旅游</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <style scoped>
-.dingdanys ul li a{
-    color:#5d5858;
+.gongju{
+    margin-left: 10px;
+    font-weight: bold;
+}
+.usergongju{
+    border: 1px solid #ccc;
+    height: 250px;
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.guanggao .chakan{
+    display: block;
+    margin: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 80px;
+    text-align: center;
+    background: #efe3c1;
     font-size: 15px;
 }
-.dingdanys ul li{
-    margin-top: 50px;
-    width: 20%;
+.guanggao .lvyou2{
+    font-size: 14px;
+    display: block;
+    margin-top: 8px;
+    margin-left: 15px;
+    color: rgba(241, 224, 76, 0.78);
+}
+.guanggao .lvyou{
+    font-size: 30px;
+    display: block;
+    margin-top: 25px;
+    margin-left: 15px;  
+    color: #ffe28d;  
+}
+.guanggao{
+    background: url("../../img/userimg/touxiang.png");
+    /* height: 100%; */
+    width: 100%;
+    object-fit: contain; /*将图片的大小跟边框走，圆边图片也改变 */
+    object-fit: cover;  /* 将图片填充不溢出边框 */
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 95%;
+    height: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+.dingdanys ul li a{
+    color:#5d5858;
+    font-size: 10px;
+    word-break: keep-all;
+    /* white-space: nowrap; */
+}
+.dingdanys ul li{  
+    width: 54px;
     text-align: center;
+}
+.dingdanys ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 27px;
+    
 }
 .userdd{
     color:black;    
