@@ -17,6 +17,7 @@
 
         <div class="guide">
             <div class="first">
+                
                 <p class="day">第1天</p>
                 
                  <div class="second">
@@ -67,14 +68,22 @@ export default {
 </script>
 
 <style scoped>
-    .second{display: flex;width:95%;height:100px;justify-content: space-around;margin-top: 20px;margin-bottom:20px}
+    .first .day{
+        border-bottom:0;
+        height:30px;
+        background: url(../../assets/img/sche.png) no-repeat;
+        background-position: 4px 2px;
+        padding-left:25px;
+        }
+    .first{width:92%;margin:0 auto;}
+    .second{display: flex;width:95%;height:100px;justify-content: space-between;margin-top: 10px;margin-bottom:20px;margin-right: 0;height:125px;}
     .third{
-        width:60%;
+        width:65%;
         height: 95px;
         
         display: flex;
         flex-direction: column;
-        justify-content: space-between
+        justify-content: space-around
     }
     .second img{width:95px;height: 95px;border-radius:6px;}
     .guide{margin-top:50px}
@@ -103,7 +112,8 @@ export default {
     }
     .detail{
         font-size:14px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif;
+          
     }
     
     .main{
