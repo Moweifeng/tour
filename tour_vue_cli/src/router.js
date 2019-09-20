@@ -11,6 +11,12 @@ import Recent from './components/schedule/Recent.vue'
 import Intro from './components/schedule/Intro.vue'
 import PlaneTicket from "./components/Home_header/PlaneTicket.vue"
 import HelloContainer from "./components/HelloWorld.vue"
+import Userpayment  from "./components/user/Userpayment.vue"
+import Userevaluated from "./components/user/Userevaluated.vue"
+import Userprocessing from "./components/user/Userprocessing.vue"
+import Userrefund from "./components/user/Userrefund.vue"
+import Usertravel from "./components/user/Usertravel.vue"
+import Userall from "./components/user/Userall.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -24,6 +30,16 @@ export default new Router({
     {path:'/Intro',component:Intro},
     {path:'/Recent',component:Recent},
     {path:'/',component:HelloContainer},
+    {path:'/Userpayment',component:Userpayment},
+    {path:'/Userevaluated',component:Userevaluated},
+    {path:'/Userprocessing',component:Userprocessing},
+    {path:'/Userrefund',component:Userrefund},
+    {path:"/Usertravel",component:Usertravel},
+    {path:"/Userall",component:Userall}
+
+
+ 
+
 
 
   ]
