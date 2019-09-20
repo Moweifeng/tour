@@ -12,10 +12,14 @@ export default new Router({
     {path:'/Home',component:Home},
     {path:'/plane',component:PlaneTicket},
     {path:'/',component:Home},
+    {path:'./Schedule',component:Schedule},
+    {path:'./Recent',component:Recent},
+    // {path:'/',component:HelloContainer},
     {path:'/Schedule',component:Schedule},
     {path:'/Intro',component:Intro},
     {path:'/Recent',component:Recent},
     {path:'/',component:HelloContainer},
+
 
   ]
 })
