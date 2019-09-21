@@ -1,7 +1,7 @@
 <template>
     <div class="plane">
-        <div class="mm"></div>
-        <div class="back"><button></button><span>国内/国际机票</span><button></button></div>
+        <div class="mm" ></div>
+        <div class="back"><router-link to="/"><button></button></router-link><span>国内/国际机票</span><button></button></div>
         <course></course>
         <course02></course02>
 
@@ -60,7 +60,7 @@
          font-weight: 1000;
          color: aliceblue;
      }
-     .back>button:nth-child(1){
+     .back>a>button:nth-child(1){
       
          background: url(../../assets/Home_header/back.png) no-repeat;
          background-size: 25px;

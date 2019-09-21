@@ -69,7 +69,8 @@
 
          ],
          
-             goin:0
+             goin:0,
+             value:""
         } 
         },
         methods:{

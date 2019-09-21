@@ -1,7 +1,7 @@
 <template>
     <div class="course">
         <div class="choose" v-for="(item,index) of line" :key="index">
-            <div @click="ks" :class="co" :data-index="index" :data-i="item.name">{{item.name}}</div>
+            <div @click="ks" :class="index == co ? 'kk' : '' " :data-index="index" :data-i="item.name">{{item.name}}</div>
         </div>
         <div class="detail">
             <transition name="slide-fade">
@@ -42,7 +42,7 @@
         data() {
             return {
                 line: [{ name: "单程" }, { name: "往返" }, { name: "多程" }],
-                co: "",
+                co: 0,
                 na: "",
                 oo: 0,
                 kk:0,
@@ -67,12 +67,11 @@
             ks(e) {
                 var name = e.target.dataset.i;
                 this.na = name;
-                if (e.target.className == "") {
-                    e.target.className = "kk";
-                } else {
-                    e.target.className = "";
-                }
-
+               var index = e.target.dataset.index
+                this.co =  index
+                
+                
+              
 
             }
         },
@@ -120,7 +119,7 @@
 
     /* .choose>div:hover  */
     .kk {
-        transition: all 0.8s;
+        transition: all 0.5s;
         border-radius: 0em 0em 1em 1em;
         background: rgb(212, 211, 211);
         border-bottom: 4px solid rgb(231, 137, 29);
