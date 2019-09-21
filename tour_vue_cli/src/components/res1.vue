@@ -54,7 +54,7 @@
         </div>
         <div>
             <img src="lists[goin].img"> >{{goin}}-->
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 <script>
@@ -68,9 +68,13 @@
              {name:"购物",img:require('../assets/res102.jpg')}
 
          ],
-         
+
              goin:0,
-             value:""
+             value:"",
+
+            value:"",
+             goin:0
+
         } 
         },
         methods:{

@@ -111,7 +111,7 @@ server.get("/schedule",(req,res)=>{
     if(!ps){
       ps = 20;
     }
-    //4:创建sql语句
+    
     var sql = "SELECT pid,img_url,location,intro,avatar,user,quantity";
     sql+=" FROM recommend";
     sql+=" LIMIT ?,?";
@@ -125,3 +125,13 @@ server.get("/schedule",(req,res)=>{
       data:result});
     });
    })
+
+	//精彩推荐商品页跳详情路由
+   server.get("/fantastic",(req,res)=>{
+	let pid = req.query.pid;
+    var sql = "select * from fantastic Where pid = ?"
+	pool.query(sql,[pid],(err,result)=>{
+		if(err)throw err;
+		res.send({code:1,msg:"查询成功",data:result});
+	})
+})
