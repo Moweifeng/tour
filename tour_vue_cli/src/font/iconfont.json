@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2147542",
+      "name": "相机 [转换]",
+      "font_class": "xj",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
       "icon_id": "3397944",
       "name": "shipin",
       "font_class": "shipin",

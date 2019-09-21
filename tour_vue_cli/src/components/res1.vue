@@ -68,7 +68,7 @@
              {name:"购物",img:require('../assets/res102.jpg')}
 
          ],
-         
+            value:"",
              goin:0
         } 
         },
