@@ -1,12 +1,15 @@
 <template>
     <div class="plane">
-        <div class="mm"></div>
-        <div class="back"><button></button><span>国内/国际机票</span><button></button></div>
+        <div class="mm" ></div>
+        <div class="back"><router-link to="/"><button></button></router-link><span>国内/国际机票</span><button></button></div>
         <course></course>
+        <course02></course02>
+
     </div>
 </template>
 <script>
     import course from "./Plane_cps/course.vue"
+    import course02 from "./Plane_cps/course02.vue"
    export default{
        data() {
            return {
@@ -14,14 +17,15 @@
            }
        },
        components:{
-            "course":course
+            "course":course,
+            "course02":course02
        }
    }
 </script>
 <style>
      .plane{
          width: 100%;
-         height:100% ;
+         height:1090px ;
          background-color: #070607;
          
         
@@ -56,7 +60,7 @@
          font-weight: 1000;
          color: aliceblue;
      }
-     .back>button:nth-child(1){
+     .back>a>button:nth-child(1){
       
          background: url(../../assets/Home_header/back.png) no-repeat;
          background-size: 25px;

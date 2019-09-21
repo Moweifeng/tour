@@ -7,6 +7,7 @@
 <style>
    .app-container{
      overflow-x:hidden;
+     height: 100% !important;
 
    }
 

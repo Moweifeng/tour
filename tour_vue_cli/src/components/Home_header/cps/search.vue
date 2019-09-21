@@ -13,7 +13,7 @@
     display: flex;
     justify-content:space-around;
     position: fixed;
-    top: 25px;
+    top: 2px;
     z-index: 999;
     
   }
