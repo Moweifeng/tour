@@ -2,10 +2,10 @@
     <div class="recommed">
         <div class="recommedsList">
             <div class="recommed-find">
-                <h2 class="find-title">超极新发现</h2>
-                <h4 class="find-subtitle">密云古北水镇一日游(包午餐)</h4>
+                <h2 class="find-title" v-text="'超极新发现'"></h2>
+                <h4 class="find-subtitle" v-text="list[findId].title"></h4>
                 <div class="find-goodLike iconfont iconzan">
-                    <span>8人说好</span>
+                    <span v-text="list[findId].love+'人说好'"></span>
                 </div>
             </div>
             <div class="recommed-videolist">
@@ -57,7 +57,36 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return{
+            list:[],
+            findId:Math.ceil(Math.random()*43),
+            pno:0
+        }
+    },
+    created(){
+       this.$nextTick(()=>{
+           this.loadMore();
+       })  
+   },
+    methods:{
+       loadMore(){
+           var url = "indexList";
+           this.pno++;
+           var obj = {pno:this.pno};
+           this.axios.get(url,{params:obj})
+           .then(res=>{
+               var rows = this.list.concat(res.data.data);
+               this.list = rows;
+               console.log(this.list);
+               console.log(JSON.parse(this.list[0].picList));
+            // let tmp = eval(this.list[0].picList)
+            // console.log(tmp)
+            //    console.log(eval(this.list[0].picList))
+            //    console.log(JSON.parse(this.list[0].picList)[0].picUrl);
+           })
+       },
+    }
 }
 </script>
 <style scoped>
@@ -87,6 +116,9 @@ export default {
     }
     .recommed-find,.recommed-schedule,.videolist-img{
         height: 200px;
+    }
+    .recommed-find{
+        /* background: url(list[findId].picList[0]); */
     }
     .find-title,.schedule-title{
         font-size:16px;

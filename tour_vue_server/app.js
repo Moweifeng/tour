@@ -32,12 +32,28 @@ server.use(session({
     }
 }))
 //7 配置静态目录
-
-
+server.use(express.static("public"));
+//加载index页面
+server.get("/indexList",(req,res)=>{
+    var pno = req.query.pno;
+    var ps  = req.query.pageSize;
+    if(!pno){
+      pno = 1;
+    }
+    if(!ps){
+      ps = 43;
+    }
+    var sql = "SELECT * FROM feature_spot LIMIT ?,?";
+    var offset = (pno-1)*ps;
+    ps = parseInt(ps);
+    pool.query(sql,[offset,ps],(err,result)=>{
+      if(err) throw err;
+      res.send({code:1,msg:"查询成功",
+      data:result});
+    })
+});
 
 // chenyuan加载schedule页面
-server.use(express.static("public"))
-
 server.get("/schedule",(req,res)=>{
     //2:接收客户请求数据 
     //  pno 页码   pageSize 页大小
