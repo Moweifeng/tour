@@ -1,19 +1,20 @@
 <template>
     <div>
-        <img src="../img/oslo.png" class="img">
+        <img :src="'http://127.0.0.1:8080/'+dataObj.img_url" class="img">
+        <img src="../../assets/img/return.png" class="return" @click="goback">
         <div class="main">
-            <h3>领略奥斯陆风范</h3>
-            <h6>适合5-10月</h6>
+            <h3>{{dataObj.title}}</h3>
+            <h6>{{dataObj.subtitle}}</h6>
             <div class="author">
-                <img src="../img/1.jpg" class="avatar">
-                <p>隔壁老王</p>
+                <img :src="'http://127.0.0.1:8080/'+dataObj.avatar" class="avatar">
+                <p>{{dataObj.user}}</p>
                 <img src="" alt="">
             </div>
             
         </div>
-        <div class="star">逛奥斯陆大广场，看超美亮灯夜景</div>
-        <div class="star">逛奥斯陆大广场，看超美亮灯夜景</div>
-        <div class="star">逛奥斯陆大广场，看超美亮灯夜景</div>
+        <div class="star">{{dataObj.scene1}}</div>
+        <div class="star">{{dataObj.scene2}}</div>
+        <div class="star">{{dataObj.scene3}}</div>
 
         <div class="guide">
             <div class="first">
@@ -22,11 +23,11 @@
                 
                  <div class="second">
                      <div class="third">
-                         <div class="square">逛奥斯陆大广场，看超美亮</div>
-                         <p class="type">博物馆</p>
-                         <p class="detail">乐器博物馆可说是新古典主义的境地</p>
+                         <div class="square">{{dataObj.scene1}}</div>
+                         <p class="type">{{dataObj.intro1}}</p>
+                         <p class="detail">{{dataObj.detail1}}</p>
                      </div>
-                     <img src="../../assets/img/13.png">
+                     <img :src="'http://127.0.0.1:8080/'+dataObj.img1">
                  </div>
             </div>
 
@@ -34,11 +35,11 @@
                 <p class="day">第2天</p>
                  <div class="second">
                      <div class="third">
-                         <div class="square">逛奥斯陆大广场，看超美亮</div>
-                         <p class="type">博物馆</p>
-                         <p class="detail">乐器博物馆可说是新古典主义的境地</p>
+                         <div class="square">{{dataObj.scene2}}</div>
+                         <p class="type">{{dataObj.intro2}}</p>
+                         <p class="detail">{{dataObj.detail2}}</p>
                      </div>
-                     <img src="../../assets/img/13.png">
+                     <img :src="'http://127.0.0.1:8080/'+dataObj.img2">
                  </div>
             </div>
 
@@ -46,11 +47,11 @@
                 <p class="day">第3天</p>
                  <div class="second">
                      <div class="third">
-                         <div class="square">逛奥斯陆大广场，看超美亮</div>
-                         <p class="type">博物馆</p>
-                         <p class="detail">乐器博物馆可说是新古典主义的境地</p>
+                         <div class="square">{{dataObj.scene3}}</div>
+                         <p class="type">{{dataObj.intro3}}</p>
+                         <p class="detail">{{dataObj.detail3}}</p>
                      </div>
-                     <img src="../../assets/img/13.png">
+                     <img :src="'http://127.0.0.1:8080/'+dataObj.img3">
                  </div>
             </div>
             
@@ -63,11 +64,43 @@
 
 <script>
 export default {
+    data(){
+        return{
+            dataObj:{},
+            pid:0,
+        }
+    },
+    props:["pid"],
+    methods:{
+        goback(){
+            this.$router.push("/home")
+        },
+        load(){
+            (async()=>{
+                var result = await this.axios.get("http://localhost:8080/fantastic",{
+                    params:{
+                        pid:this.pid
+                    }
+                });
+                console.log(result.data);
+                this.dataObj=result.data.data[0];
+            })();
+        }
+    },
+    created(){
+        this.load();
 
+    }
 }
 </script>
 
 <style scoped>
+    .return{
+        position:absolute;
+        top:5px;
+        left:5px;
+        z-index: 10;
+    }
     .first .day{
         border-bottom:0;
         height:30px;
@@ -101,7 +134,7 @@ export default {
         font-size:15px;
     }
     .type{
-        width:45px;
+        width:55px;
         height: 16px;
         text-align:center;
         border-radius:5px;
@@ -113,7 +146,7 @@ export default {
     .detail{
         font-size:14px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif;
-          
+        border-bottom:0;
     }
     
     .main{

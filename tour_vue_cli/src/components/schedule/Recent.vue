@@ -5,7 +5,7 @@
         </div>
         <div class="dad">
             <div class="child" v-for="(item,index) of list" :key="index">
-                <router-link to="#" class="hola">
+                <router-link :to="'/intro/'+item.pid" class="hola">
                     <img :src="'http://127.0.0.1:8080/'+item.img_url">
                     <h6>{{item.title}}</h6>
                     <span>{{item.location}}</span>
@@ -21,7 +21,7 @@
         </div>
         <div class="papa">
             <div class="son" v-for="(item,index) of list2" :key="index">
-                <router-link to="#" class="bonjour">
+                <router-link :to="'/intro/'+item.pid" class="bonjour">
                     <div class="fa" >
                         <img :src="'http://127.0.0.1:8080/'+item.img_url" class="imgurl"> 
                         <div class="loc">

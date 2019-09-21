@@ -115,7 +115,7 @@ INSERT INTO fantastic VALUES(null,"img/fantacy/oslo.png","挪威奥斯陆4日游
 "挪威奥斯陆的旅游名胜","img/recommend/5.png","img/recommend/15.png","img/recommend/25.png");
 
 INSERT INTO fantastic VALUES(null,"img/fantacy/helsinki.png","芬兰赫尔辛基3日游","适宜8-11月","img/avatar/6.jpg","lampard","赫尔辛基广场","芬兰湾","格陵兰岛","广场",
-"风景优美","艺术圣地","是瑞士西部的一座中世纪水上城堡，位于日内瓦湖畔，是瑞士历史最悠久的历史遗迹之一","沃韦曾是罗马帝国的居民点，景色优美，吸引许多名人在此居住",
+"风景优美","艺术圣地","位于赫尔辛基市中心，是芬兰历史最悠久的历史遗迹之一","沃韦曾是罗马帝国的居民点，景色优美，吸引许多名人在此居住",
 "这是一个迷人的旅游胜地，很多艺术家都来过这里","img/recommend/6.png","img/recommend/16.png","img/recommend/26.png");
 
 INSERT INTO fantastic VALUES(null,"img/fantacy/frankfurt.png","法兰克福5日游","适宜6-11月","img/avatar/7.jpg","piero","法兰克福金融城","莱茵河谷游船","圣家堂","金融城",
@@ -142,9 +142,9 @@ CREATE TABLE recent(
     location varchar(32),
     time     varchar(32)
 );
-INSERT INTO recent VALUES(null,"img/recent/1.png","阿联酋迪拜豪华游","广州出发","下周六");
-INSERT INTO recent VALUES(null,"img/recent/2.png","枫叶国体验之旅","北京出发","本周三");
-INSERT INTO recent VALUES(null,"img/recent/3.png","澳洲阳关沙滩之旅","深圳出发","下周日");
+INSERT INTO recent VALUES(null,"img/recent/1.png","瑞士伯尔尼豪华游","广州出发","下周六");
+INSERT INTO recent VALUES(null,"img/recent/2.png","西班牙体验之旅","北京出发","本周三");
+INSERT INTO recent VALUES(null,"img/recent/3.png","瑞士苏黎世体验游","深圳出发","下周日");
 
 DROP TABLE IF EXISTS recommend;
 CREATE TABLE recommend(
@@ -156,16 +156,16 @@ CREATE TABLE recommend(
 	 user      varchar(32),
 	 quantity  smallint(10)
 );
-INSERT INTO recommend VALUES(null,"img/recommend/1.png","丽江","环境很好风景宜人","img/avatar/1.jpg","flypig",313);
-INSERT INTO recommend VALUES(null,"img/recommend/2.png","大理","湖水十分清澈，在上面划船是一种享受","img/avatar/1.jpg","star",66);
-INSERT INTO recommend VALUES(null,"img/recommend/3.png","丽江","天气晴朗攀登玉龙雪山","img/avatar/3.jpg","piero",39);
-INSERT INTO recommend VALUES(null,"img/recommend/4.png","大理","在大理也能发现小桥流水人家","img/avatar/4.jpg","fabragas",12);
-INSERT INTO recommend VALUES(null,"img/recommend/5.png","安特卫普","来钻石啤酒巧克力之乡游览一番","img/avatar/1.jpg","tom",98);
-INSERT INTO recommend VALUES(null,"img/recommend/6.png","哥本哈根","参观小美人鱼","img/avatar/1.jpg","john",106);
+INSERT INTO recommend VALUES(null,"img/recommend/1.png","伯尔尼","环境很好风景宜人","img/avatar/1.jpg","flypig",313);
+INSERT INTO recommend VALUES(null,"img/recommend/2.png","巴塞罗那","湖水十分清澈，在上面划船是一种享受","img/avatar/1.jpg","star",66);
+INSERT INTO recommend VALUES(null,"img/recommend/3.png","苏黎世","天气晴朗攀登阿尔卑斯山","img/avatar/3.jpg","piero",39);
+INSERT INTO recommend VALUES(null,"img/recommend/4.png","哥本哈根","发现小桥流水人家","img/avatar/4.jpg","fabragas",12);
+INSERT INTO recommend VALUES(null,"img/recommend/5.png","奥斯陆","来体验一下钻石啤酒巧克力","img/avatar/1.jpg","tom",98);
+INSERT INTO recommend VALUES(null,"img/recommend/6.png","赫尔辛基","参观著名雕像","img/avatar/1.jpg","john",106);
 INSERT INTO recommend VALUES(null,"img/recommend/7.png","法兰克福","天气晴朗万里无云","img/avatar/2.jpg","modric",335);
-INSERT INTO recommend VALUES(null,"img/recommend/8.png","布鲁塞尔","到处逛一逛，街道洁净很漂亮","img/avatar/8.jpg","ronaldo",97);
-INSERT INTO recommend VALUES(null,"img/recommend/9.png","安特卫普","到集市上采购生活必需品","img/avatar/7.jpg","zidane",54);
-INSERT INTO recommend VALUES(null,"img/recommend/10.png","鹿特丹","一望无际的农田","img/avatar/6.jpg","ramos",68);
+INSERT INTO recommend VALUES(null,"img/recommend/8.png","慕尼黑","到处逛一逛，街道洁净很漂亮","img/avatar/8.jpg","ronaldo",97);
+INSERT INTO recommend VALUES(null,"img/recommend/9.png","佛罗伦萨","到集市上采购生活必需品","img/avatar/7.jpg","zidane",54);
+INSERT INTO recommend VALUES(null,"img/recommend/10.png","罗马","一望无际的农田","img/avatar/6.jpg","ramos",68);
 INSERT INTO recommend VALUES(null,"img/recommend/11.png","里昂","又是一年葡萄成熟时","img/avatar/5.jpg","lampard",21);
 INSERT INTO recommend VALUES(null,"img/recommend/12.png","维也纳","多瑙河明珠音乐之都","img/avatar/2.jpg","villas",76);
 INSERT INTO recommend VALUES(null,"img/recommend/13.png","苏黎世","参观世界一流学府苏黎世理工大学","img/avatar/3.jpg","torres",302);
