@@ -78,8 +78,6 @@
                 this.goin = index;
             }
         }
-
-
     }
 </script>
 <style>

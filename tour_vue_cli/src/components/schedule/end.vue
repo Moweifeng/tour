@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="end">
+            <img src="../../assets/img/return.png" class="return" @click="goback">
             <div><img src="../../assets/img/end.jpg" class="pig"></div>
             <div class="one">您还没有行程规划哦</div>
             <div class="two">没有更多了</div>
@@ -12,11 +13,17 @@
 
 <script>
 export default {
-    data(){}
+    data(){},
+    methods:{
+        goback(){
+            this.$router.push("/home")
+        },
+    }
 }
 </script>
 
 <style scoped>
+    .return{position: absolute;top:8px;left:8px;}
     .one{margin:5px auto;text-align: center}
     .two{margin:5px auto;text-align: center}
     .end{

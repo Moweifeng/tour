@@ -67,7 +67,7 @@ INSERT INTO fantacy VALUES(null,"img/fantacy/rome.png","意大利罗马","适宜
 /*精彩推荐商品跳详情页路由*/
 DROP TABLE IF EXISTS fantastic;
 CREATE TABLE fantastic(
-    pid      int(10) PRIMARY KEY AUTO_INCREMENT,
+    pid      int(20) PRIMARY KEY AUTO_INCREMENT,
     img_url  varchar(255),
     title    varchar(64),
     subtitle varchar(64)
@@ -75,7 +75,7 @@ CREATE TABLE fantastic(
 
 DROP TABLE IF EXISTS fantastic;
 CREATE TABLE fantastic(
-		pid      int(10) PRIMARY KEY AUTO_INCREMENT,
+		pid      int(20) PRIMARY KEY AUTO_INCREMENT,
 		img_url  varchar(255),
 		title    varchar(64),
 		subtitle varchar(64),
@@ -134,6 +134,46 @@ INSERT INTO fantastic VALUES(null,"img/fantacy/roma.png","意大利罗马5日游
 "斗兽场","名胜","休闲","基本上都是家族世代经营，倾听他们的家族冒险传奇","是欣赏峡湾的好地点",
 "具有2000年历史的名人故居","img/recommend/10.png","img/recommend/20.png","img/recommend/30.png");
 
+INSERT INTO fantastic VALUES(null,"img/fantacy/bern.png","法国里昂5日游","适宜2-6月","img/avatar/3.jpg","zidane","自由广场","艾于兰斯观景台","第戎圣母院",
+"广场","名胜","休闲","在宏伟宫殿的辉映下展现初茫萨尔1685年设计的半园形广场，用来迎接国王路易十四的骑马雕塑，是法国最壮观的皇家广场之一。","是欣赏峡湾的好地点",
+"13世纪勃艮第建筑的杰出代表，继承了罗马艺术时期的建筑风格。","img/recommend/1.png","img/recommend/11.png","img/recommend/21.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/spain.png","维也纳3日游","适宜5-8月","img/avatar/3.jpg","trump","维也纳金色大厅","美泉宫","霍夫堡",
+"音乐厅","名胜","休闲","维也纳音乐协会的大楼与查理教堂隔街相望，这座精致小楼是举世闻名的金色大厅所在地，它被称为“世界五大音乐厅”之一","是坐落在奥地利首都维也纳 Vienna 西南部的巴洛克艺术建筑，曾是神圣罗马帝国、奥地利帝国、奥匈帝国和哈布斯堡王朝家族的皇宫，如今是维也纳最负盛名的旅游景点，美泉宫及其花园被联合国教科文组织列入《世界文化遗产名录》。",
+"霍夫堡宫是奥地利哈布斯堡王朝的宫苑，坐落在首都维也纳的市中心。在1918年以前一直由皇室居住","img/recommend/2.png","img/recommend/12.png","img/recommend/22.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/zurich.png","瑞士苏黎世豪华3日游","适宜8-10月","img/avatar/3.jpg","Brian","苏黎世老城区","霍夫公园","班霍夫大街","城区",
+"公园","名胜","是瑞士融合多种风格建筑的典范","别具一个风情万种的人间天堂","班霍夫大街是欧洲最长的一条购物大道，也是世界上最昂贵的购物大道",
+"img/recommend/3.png","img/recommend/13.png","img/recommend/23.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/oslo.png","卢森堡2日游","适宜3-8月","img/avatar/4.jpg","liang","阿道夫大桥","卢森堡大峡谷","宪法广场",
+"名胜","峡谷","休闲","于1900-1903年阿道夫大公爵统治下建造，这个桥以拥有世界上最大的石制拱门而闻名海外。", "佩特罗斯大峡谷又被称为卢森堡大峡谷，是卢森堡市新老市区的天然分界。因为佩特罗斯大峡谷的百米宽度和60米的深度，卢森堡在历史上一直被视为军事重地",
+"宪法广场的“阵亡将士纪念碑”于1923年完工。当时是为了纪念第一次世界大战中所阵亡的3,000名卢森堡士兵，而在二战被毁坏之后重建，因此就具有了双重的意义。","img/recommend/4.png","img/recommend/14.png","img/recommend/24.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/helsinki.png","德国5日游","适宜5-8月","img/avatar/5.jpg","pirlo","波恩·贝多芬广场","科隆大教堂","莱茵河",
+"广场","名胜","休闲","贝多芬广场是波恩市引为自豪和荣耀的地方。原名明斯特广场，1880年为纪念贝多芬而建造了一座纪念碑。","隆大教堂是德国最大的教堂，也是世界最高的教堂之一。以轻盈、雅致著称于世。位于科隆市中心，莱茵河畔。",
+"莱茵河是西欧第一大河，发源于瑞士境内的阿尔卑斯山北麓，西北流经列支敦士登、奥地利、法国、德国和荷兰，最后在鹿特丹附近注入北海","img/recommend/5.png","img/recommend/15.png","img/recommend/25.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/munich.png","奥斯陆5日游","适宜5-8月","img/avatar/6.jpg","helen","峡湾特色农庄","艾于兰斯观景台","小火车游乐场",
+"农庄","名胜","休闲","基本上都是家族世代经营，倾听他们的家族冒险传奇","是欣赏峡湾的好地点",
+"是欣赏峡湾的好地点","img/recommend/6.png","img/recommend/16.png","img/recommend/26.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/frankfurt.png","德国5日游","适宜2-9月","img/avatar/2.jpg","mike","贝多芬广场","科隆大教堂","莱茵河",
+"大桥","名胜","休闲","贝多芬塑像的周围围绕著九个小天使，象徵音乐大师不朽的九部交响曲","市中高楼大厦鳞次栉比，商店比比皆是，各种商品琳琅满目，是一个繁华的商业城市",
+"莱茵河是西欧第一大河，发源于瑞士境内的阿尔卑斯山北麓，西北流经列支敦士登、奥地利、法国、德国和荷兰，最后在鹿特丹附近注入北海","img/recommend/7.png","img/recommend/17.png","img/recommend/27.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/roma.png","日内瓦2日游","适宜7-8月","img/avatar/8.jpg","brown","沃韦","少女峰","因特拉肯",
+"景点","名胜","休闲","因特拉肯位于瑞士着名风景区少女峰（Jungfraujoch）的脚下，也是进入伯尔尼高地的门户。","一览少女峰（是中国黄山的姐妹峰）天然奇观的风采，因此成为了欧洲着名的度假胜地。这儿整年气候温和，湖光山色，环境优美，也是瑞士人心目中的避暑山庄。",
+"因特拉肯是一座拥有英国风味的湖边小镇，城内有马车、花园、购物街、餐厅、赌场、湖面游船，还有主题乐园，再加上便捷的交通前往山上的度假村，所以一直是休闲和会议旅游的首选地。","img/recommend/8.png","img/recommend/18.png","img/recommend/28.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/florence.png","洛桑3日游","适宜5-8月","img/avatar/2.jpg","dong","奥林匹克博物馆","乌希码头","国际奥委会总部",
+"博物馆","名胜","休闲","博物馆于1993年对外开放，是世界上最大的奥林匹克竞赛信息中心。","位于瑞士洛桑莱蒙湖畔最好的区域，也是最重要的水运枢纽之一。沿岸有一些咖啡厅、餐厅和酒店，可以在这些地方尽情欣赏莱蒙湖的旖旎风光。",
+"在国际奥委会成立后的相当一段时间内，顾拜旦在巴黎的住所就是国际奥委会的总部。1915年，为避免战争对奥林匹克运动的干扰，顾拜旦将国际奥委会总部由法国巴黎迁往瑞士洛桑。","img/recommend/9.png","img/recommend/19.png","img/recommend/29.png");
+
+INSERT INTO fantastic VALUES(null,"img/fantacy/denmark.png","巴黎6日游","适宜4-11月","img/avatar/1.jpg","long","卢浮宫","埃菲尔铁塔","巴黎迪士尼乐园",
+"博物馆","名胜","休闲","《蒙娜丽莎》油画和胜利女神石雕是必打卡的，数量惊人的艺术品值得再来几次。","可以在塞纳河对岸的夏悠宫门口观赏埃菲尔铁塔，拍摄角度绝佳。",
+"少女心爆棚的梦幻乐园，料理鼠王和恐怖旅馆非常有特色，值得去体验","img/recommend/13.png","img/recommend/30.png","img/recommend/18.png");
+
 DROP TABLE IF EXISTS recent;
 CREATE TABLE recent(
     pid      int(10) PRIMARY KEY AUTO_INCREMENT,
@@ -151,7 +191,7 @@ CREATE TABLE recommend(
 	 pid       int(10) PRIMARY KEY AUTO_INCREMENT,
 	 img_url   varchar(255),
 	 location  varchar(32),
-         intro     varchar(32),
+     intro     varchar(32),
 	 avatar    varchar(32),
 	 user      varchar(32),
 	 quantity  smallint(10)
