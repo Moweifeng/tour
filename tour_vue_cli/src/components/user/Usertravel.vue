@@ -42,7 +42,7 @@ export default {
 }
 .btn{
     font-size: 10px;
-    width: 75px;
+     width: 16.6%;
     white-space: nowrap
 }
 </style>
