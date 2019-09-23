@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="boss">
         <img :src="'http://127.0.0.1:8080/'+dataObj.img_url" class="img">
         <img src="../../assets/img/return.png" class="return" @click="goback">
         <div class="main">
@@ -67,7 +67,7 @@ export default {
     data(){
         return{
             dataObj:{},
-            pid:0,
+            // pid:0,
         }
     },
     props:["pid"],
@@ -95,6 +95,7 @@ export default {
 </script>
 
 <style scoped>
+    .boss{height:200px;}
     .return{
         position:absolute;
         top:5px;
@@ -119,7 +120,7 @@ export default {
         justify-content: space-around
     }
     .second img{width:95px;height: 95px;border-radius:6px;}
-    .guide{margin-top:50px}
+    .guide{margin-top:50px;}
     .first .day{text-align: center}
     .star{
         background:url(../../assets/img/star1.png) 2%  no-repeat ;

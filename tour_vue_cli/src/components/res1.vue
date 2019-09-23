@@ -68,8 +68,13 @@
              {name:"购物",img:require('../assets/res102.jpg')}
 
          ],
+
+             goin:0,
+             value:"",
+
             value:"",
              goin:0
+
         } 
         },
         methods:{
@@ -78,8 +83,6 @@
                 this.goin = index;
             }
         }
-
-
     }
 </script>
 <style>

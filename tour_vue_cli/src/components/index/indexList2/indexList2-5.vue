@@ -63,7 +63,11 @@ export default {
     }
     .hotel-img{
         position: relative;
+<<<<<<< HEAD
+        /* background: url("../../img/spain.png") no-repeat; */
+=======
         background: url("../../../img/index/p (1).jpg") no-repeat;
+>>>>>>> b76c7b1b73e31c80091f9bfdf171c58fa791a992
         
         height: 150px;
     }
