@@ -37,8 +37,8 @@ server.use(express.static("public"));
 server.get("/Login",(request,response)=>{
   var u = request.query.uname;
   var p = request.query.upwd;
-  var sql = "SELECT id FROM xz_login";
-  sql+="WHERE uname =? AND upwd=md5(?)";
+  var sql = "SELECT uid FROM tour_user";
+  sql+=" WHERE uname = ? AND upwd= ?";
   pool.query(sql,[u,p],(err,result)=>{
     if(err) throw err;
     if(result.length==0){

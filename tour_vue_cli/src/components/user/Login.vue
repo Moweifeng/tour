@@ -26,12 +26,12 @@
        <!-- </div> -->
 
     </div>
-    <mt-button size="large" @click="login" class="login">登录</mt-button>
+    <mt-button size="large" @click="login" class="login" >登录</mt-button>
      <!-- <img src="../../img/weixin.png" class="weixin ">
       <img src="../../img/zhifubao.png" class="taobao "> -->
       <div class="b">
       <a href="#" class="zhanghao" @click="ruguo">使用账号密码登录</a>
-     <a href="#" class="regict">注册</a> 
+     <router-link class="regict" to="/Regict">注册</router-link> 
 
       </div>
     </div>
@@ -58,23 +58,27 @@ export default {
          var  u =this.uname;
          var  p = this.upwd;
          //3-16位，字母数字
-         var reg=/^{a-z0-9}{3,16}$/i;
-         if(reg.test(u)){
+        //  var reg=/^[a-z0-9]{3,16}$/i;
+         var ureg=/^[a-z0-9]{3,10}$/i;
+         if(!ureg.test(u)){
             this.$toast("用户名格式不正确");
+            console.log(1)
             return ;
          }
-         if(reg.test(p)){
+         if(!ureg.test(p)){
             this.$toast("密码格式不正确");
             return;
          }
-         var url="Login";
+         var url="login";
          var obj= {uname:u,upwd:p};
-         this.axios.get(url,{parms,obj}).then(res=>{
+         this.axios.get(url,{params:obj}).then(res=>{
+             console.log(res)
              var code = res.data.code;
              if(code==-1){
                  this.$messagebox("消息","用户名或密码错误");
              }else{
                  this.$router.push("/User")
+                 
              }
          })
     }

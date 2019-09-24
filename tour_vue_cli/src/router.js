@@ -19,6 +19,7 @@ import Userprocessing from "./components/user/Userprocessing.vue"
 import Userrefund from "./components/user/Userrefund.vue"
 import Usertravel from "./components/user/Usertravel.vue"
 import Userall from "./components/user/Userall.vue"
+import Regict from "./components/user/Regict.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -38,7 +39,8 @@ export default new Router({
     {path:'/Userprocessing',component:Userprocessing},
     {path:'/Userrefund',component:Userrefund},
     {path:"/Usertravel",component:Usertravel},
-    {path:"/Userall",component:Userall}
+    {path:"/Userall",component:Userall},
+    {path:"/Regict",component:Regict},
 
 
  

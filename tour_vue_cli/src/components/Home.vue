@@ -35,6 +35,7 @@
             </mt-tab-container-item> 
 
             <mt-tab-container-item id="me">
+                <!-- <user ></user> -->
                 <login></login>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -82,6 +83,9 @@ export default {
             selected:"1",
         }
     },
+       created(){
+        this.loadMore();
+    },
     components:{
         "res1":Res1,
         "login":Login,
@@ -93,7 +97,12 @@ export default {
 
         "find":Find,
 
+    },methods:{
+   
+    loadMore(){
+    }
     },
+  
 }
 </script>
 <style scoped>
