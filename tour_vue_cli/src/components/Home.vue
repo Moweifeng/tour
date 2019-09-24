@@ -35,8 +35,7 @@
             </mt-tab-container-item> 
 
             <mt-tab-container-item id="me">
-                <user></user>
-                <!-- <login></login> -->
+                <login></login>
             </mt-tab-container-item>
         </mt-tab-container>
 

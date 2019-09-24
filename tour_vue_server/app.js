@@ -33,6 +33,21 @@ server.use(session({
 }))
 //7 配置静态目录
 server.use(express.static("public"));
+//登录
+server.get("/Login",(request,response)=>{
+  var u = request.query.uname;
+  var p = request.query.upwd;
+  var sql = "SELECT id FROM xz_login";
+  sql+="WHERE uname =? AND upwd=md5(?)";
+  pool.query(sql,[u,p],(err,result)=>{
+    if(err) throw err;
+    if(result.length==0){
+      response.send({code:-1,msg:"用户名或者密码不正确"})
+    }else{
+      response.send({code:1,msg:"登陆成功"})
+    }
+  })
+})
 //加载index页面
 server.get("/indexList",(req,res)=>{
     var pno = req.query.pno;

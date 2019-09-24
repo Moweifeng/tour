@@ -43,8 +43,8 @@ export default {
     // },
     data(){
     return{
-      uname:"",
-      upwd:"",
+      uname:"",//用户名
+      upwd:"",//密码
       phone:"",
       yzm:"",
       f:true
@@ -55,7 +55,28 @@ export default {
             // alert(this.f)
         },
         login(){
-        console.log(1)
+         var  u =this.uname;
+         var  p = this.upwd;
+         //3-16位，字母数字
+         var reg=/^{a-z0-9}{3,16}$/i;
+         if(reg.test(u)){
+            this.$toast("用户名格式不正确");
+            return ;
+         }
+         if(reg.test(p)){
+            this.$toast("密码格式不正确");
+            return;
+         }
+         var url="Login";
+         var obj= {uname:u,upwd:p};
+         this.axios.get(url,{parms,obj}).then(res=>{
+             var code = res.data.code;
+             if(code==-1){
+                 this.$messagebox("消息","用户名或密码错误");
+             }else{
+                 this.$router.push("/User")
+             }
+         })
     }
     },
     
