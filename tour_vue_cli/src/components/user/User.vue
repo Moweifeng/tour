@@ -327,6 +327,7 @@ a{
 }
     .touxiang{
        width: 22%;
+       height: 100px;
        border: 2px solid #ccc;
        border-radius: 50%;
        margin-left: 1%;
