@@ -10,6 +10,12 @@
            <mt-field placeholder="请输入用户名" v-model="uname" id="name" style="border-bottom:1px solid #ccc;width:90%;left:4%;margin-top:10px"></mt-field>
            <mt-field placeholder="请输入密码"  v-model="upwd" id="pwd"
            style="border-bottom:1px solid #ccc;width:90%;left:4%;margin-top:10px"></mt-field>
+           <mt-field placeholder="请输入年龄" v-model="age" id="age" style="border-bottom:1px solid #ccc;width:90%;left:4%;margin-top:10px"></mt-field>
+          
+          
+       </div>
+       <div>
+            <mt-radio v-model="value" :options="options" ></mt-radio>
        </div>
        <div>
            <mt-button size="large" class="regict" @click="regict" style="background:#FFCC00;margin-top:30px;border-radius:50px;
@@ -25,8 +31,57 @@ export default {
     data(){
         return{
             uname:"",
-            upwd:""
+            upwd:"",
+            age:"",
+            value:"1",
+          options:[
+              {
+              label:'男',
+              value:'1'
+              },
+              {
+                  label:'女',
+                  value:'0'
+              }
+              ]
         }
+    },
+    methods:{
+    //    selSex:function(){
+    //     //   console.log(this.value)
+    //    },
+       regict(){
+           var u = this.uname;
+           var p = this.upwd;
+           var s = this.value;
+           var a = this.age;
+           console.log(this.uname)
+           console.log(this.upwd)
+           console.log(this.value)
+           console.log(this.age)
+            var ureg=/^[a-z0-9]{3,10}$/i;
+         if(!ureg.test(u)){
+            this.$toast("用户名格式不正确");
+            console.log(1)
+            return ;
+         }
+         if(!ureg.test(p)){
+            this.$toast("密码格式不正确");
+            return;
+         }
+         var url="regict";
+         var obj={uname:u,upwd:p,sex:s,age:a};
+         this.axios.get(url,{params:obj}).then(res=>{
+             var code=res.data.code;
+             if(code==-1){
+                 this.$messagebox("消息","用户名无法注册")
+             }else{
+                 this.$router.push("/Login")
+             }
+         })
+
+       },
+       
     }
 }
 </script>

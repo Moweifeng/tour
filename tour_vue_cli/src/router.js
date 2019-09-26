@@ -20,6 +20,8 @@ import Userrefund from "./components/user/Userrefund.vue"
 import Usertravel from "./components/user/Usertravel.vue"
 import Userall from "./components/user/Userall.vue"
 import Regict from "./components/user/Regict.vue"
+import Login from "./components/user/Login.vue"
+import User from "./components/user/User.vue"
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -41,6 +43,9 @@ export default new Router({
     {path:"/Usertravel",component:Usertravel},
     {path:"/Userall",component:Userall},
     {path:"/Regict",component:Regict},
+    {path:"/Login",component:Login},
+    {path:"/User",component:User},
+    
 
 
  

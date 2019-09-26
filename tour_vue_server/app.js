@@ -33,6 +33,28 @@ server.use(session({
 }))
 //7 配置静态目录
 server.use(express.static("public"));
+//注册
+server.get("/Regict",(request,response)=>{
+  var u=request.query.uname;
+  console.log(u)
+  var p=request.query.upwd;
+  console.log(p)
+  var s= request.query.sex;
+  console.log(s)
+  var a=request.query.age;
+  console.log(a)
+  var sql="INSERT INTO tour_user(uname,upwd,sex,age) values(?,?,?,?)";
+  pool.query(sql,[u,p,s,a],(err,result)=>{
+    console.log(result)
+    console.log(u,p,a,s)
+    if(err) throw err;
+    if(result.affectedRows==0){
+      response.send({code:-1,msg:"用户注册失败"})
+    }else{
+      response.send({code:1,msg:"注册成功"})
+    }
+  })
+})
 //登录
 server.get("/Login",(request,response)=>{
   var u = request.query.uname;
@@ -49,24 +71,24 @@ server.get("/Login",(request,response)=>{
   })
 })
 //加载index页面
-server.get("/indexList",(req,res)=>{
-    var pno = req.query.pno;
-    var ps  = req.query.pageSize;
-    if(!pno){
-      pno = 1;
-    }
-    if(!ps){
-      ps = 43;
-    }
-    var sql = "SELECT * FROM feature_spot LIMIT ?,?";
-    var offset = (pno-1)*ps;
-    ps = parseInt(ps);
-    pool.query(sql,[offset,ps],(err,result)=>{
-      if(err) throw err;
-      res.send({code:1,msg:"查询成功",
-      data:result});
-    })
-});
+// server.get("/indexList",(req,res)=>{
+//     var pno = req.query.pno;
+//     var ps  = req.query.pageSize;
+//     if(!pno){
+//       pno = 1;
+//     }
+//     if(!ps){
+//       ps = 43;
+//     }
+//     var sql = "SELECT * FROM feature_spot LIMIT ?,?";
+//     var offset = (pno-1)*ps;
+//     ps = parseInt(ps);
+//     pool.query(sql,[offset,ps],(err,result)=>{
+//       if(err) throw err;
+//       res.send({code:1,msg:"查询成功",
+//       data:result});
+//     })
+// });
 
 // chenyuan加载schedule页面
 server.get("/schedule",(req,res)=>{

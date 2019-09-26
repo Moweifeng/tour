@@ -127,7 +127,7 @@ export default {
         position: absolute;
         color: #FFCC00;
         float: left;
-        top: 69%;
+        top:  69%;
         left: 80%;
     }
     .login{
