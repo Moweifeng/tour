@@ -33,6 +33,19 @@ server.use(session({
 }))
 //7 配置静态目录
 server.use(express.static("public"));
+//查询用户
+server.get("/selectuser",(request,response)=>{
+  var i =request.query.uid;
+  var sql="SELECT * FROM tour_user where uid=?";
+  pool.query(sql,[i],(err,result)=>{
+    if(err) throw err;
+    if(result.affectedRows==0){
+      response.send({code:-1,msg:"用户查询失败"})
+    }else{
+      response.send({code:1,msg:"用户查询成功"})
+    }
+  })
+})
 //注册
 server.get("/Regict",(request,response)=>{
   var u=request.query.uname;
@@ -66,7 +79,8 @@ server.get("/Login",(request,response)=>{
     if(result.length==0){
       response.send({code:-1,msg:"用户名或者密码不正确"})
     }else{
-      response.send({code:1,msg:"登陆成功"})
+      request.session.uid=result;
+      response.send({code:1,msg:"登陆成功",uid:request.session.uid})
     }
   })
 })

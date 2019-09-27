@@ -11,7 +11,7 @@
         </mt-header>
         <div class="tou">
             <img src="../../img/userimg/1.png" class="touxiang">
-            <span class="username">烬水楼台先得月</span>
+            <span  class="username" >烬水楼台先得月</span>
         </div>
          <a href="#" class="kefu" style="color:black">
                 <img src="../../img/userimg/kefu.png"> 我的客服 </a>   
@@ -91,7 +91,20 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            uname:"",
+            info:{}
+        }
+    },
+    methodes:{
+        loadInfo() {
+            let uid = sessionStorage.getItem('uid')
+            this.axios.get(url,{params:uid}).then(res=>{
+                this.info = res;
+            })
+        }
+    }
 
 }
 </script>

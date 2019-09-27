@@ -78,7 +78,6 @@ export default {
                  this.$messagebox("消息","用户名或密码错误");
              }else{
                  this.$router.push("/User")
-                 
              }
          })
     }

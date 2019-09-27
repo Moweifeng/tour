@@ -35,8 +35,8 @@
             </mt-tab-container-item> 
 
             <mt-tab-container-item id="me">
-                <!-- <user ></user> -->
-                <login></login>
+                <user  v-if="isLogin"></user>
+                <login v-else></login>
             </mt-tab-container-item>
         </mt-tab-container>
 
@@ -81,10 +81,18 @@ export default {
         return{
             active:"index",
             selected:"1",
+            isLogin:false,
         }
+        
+     },
+        methods:{
+        
+         
     },
+    
        created(){
         this.loadMore();
+        this.isLogin = !!sessionStorage.getItem('uid')
     },
     components:{
         "res1":Res1,
@@ -97,11 +105,9 @@ export default {
 
         "find":Find,
 
-    },methods:{
-   
-    loadMore(){
     }
-    },
+
+    
   
 }
 </script>
